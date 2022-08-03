@@ -132,11 +132,11 @@ SSH keys are an alternative method to using your password for authentication to
 obtain access to remote computing systems. They can also be used for
 authentication when transferring files or for accessing version control systems.
 
-As part of the registration process for DiRAC you should already have obtained and registered
+*As part of the registration process for DiRAC you should already have obtained and registered
 SSH keys for accessing DiRAC resources, but the process will be also covered
-here for completeness - as well as to emphasize safe SSH key management.
+here for completeness - as well as to emphasize safe SSH key management.*
 
-In this section you will create a pair of SSH keys, a private key which you keep
+This section will cover how to create a pair of SSH keys - a private key which you keep
 on your own computer and a public key which is placed on the remote HPC system
 that you will log in to.
 
@@ -151,7 +151,7 @@ $ ls ~/.ssh/
 
 then generate a new public-private key pair,
 ```
-$ ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_{{ site.workshop_host }}_ed25519
+$ ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_ed25519
 ```
 {: .language-bash}
 
@@ -171,7 +171,7 @@ If ed25519 is not available, use the older (but still strong and trusted)
 [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) cryptography:
 
 ```
-$ ssh-keygen -o -a 100 -t rsa -b 4096 -f ~/.ssh/id_{{ site.workshop_host }}_rsa
+$ ssh-keygen -o -a 100 -t rsa -b 4096 -f ~/.ssh/id_rsa
 ```
 {: .language-bash}
 
@@ -185,12 +185,21 @@ Cryptography is only as good as the weakest link, and this will be
 used to connect to a powerful and precious computing resource.
 
 Take a look in `~/.ssh` (using `ls ~/.ssh`). You should see the two
-new files: your private key (`~/.ssh/key_{{ site.workshop_host }}_ed25519`
-or `~/.ssh/key_{{ site.workshop_host }}_rsa`) and
-the public key (`~/.ssh/key_{{ site.workshop_host }}_ed25519.pub` or
-`~/.ssh/key_{{ site.workshop_host }}_rsa.pub`). If a key is
+new files: your private key (`~/.ssh/key_ed25519`
+or `~/.ssh/key_rsa`) and
+the public key (`~/.ssh/key_ed25519.pub` or
+`~/.ssh/key_rsa.pub`). If a key is
 requested by the system administrators, the *public* key is the one
 to provide.
+
+### Windows
+
+On Windows you can use one of the following:
+
+- puttygen, see the Putty
+  [documentation](https://www.chiark.greenend.org.uk/~sgtatham/putty/docs.html)
+- MobaKeyGen, see the MobaXterm
+  [documentation](https://mobaxterm.mobatek.net/documentation.html)
 
 > ##### Private keys are your private identity
 >
@@ -235,7 +244,7 @@ to provide.
 > who wishes to gain improper access is unlikely to be able to supply both required factors.
 {: .callout}
 
-> #### Further information
+> ## Further information
 >
 > For more information on SSH security and some of the
 > flags set here, an excellent resource is
@@ -243,21 +252,12 @@ to provide.
 {: .callout}
 
 
-### Windows
-
-On Windows you can use,
-
-- puttygen, see the Putty
-[documentation](https://www.chiark.greenend.org.uk/~sgtatham/putty/docs.html)
-- MobaKeyGen, see the MoabXterm
-[documentation](https://mobaxterm.mobatek.net/documentation.html)
-
 ## Logging onto the system
 
 Let's connect to a remote HPC system. In this
-workshop, we will connect to {{ site.workshop_host }} &mdash; an HPC system
-located at the {{ site.workshop_host_location }}. Although it's unlikely that
-every system will be exactly like {{ site.workshop_host }}, it's a very good
+workshop, we will connect to DiRAC's COSMA (COSmology MAchine) &mdash; an HPC system
+located at the University of Durham. Although it's unlikely that
+every system will be exactly like this one across DiRAC, it's a very good
 example of what you can expect from an HPC installation. To connect to our
 example computer, we will use SSH.
 
@@ -269,45 +269,46 @@ password access is available.  Let's attempt to connect to the HPC system
 now:
 
 ```
-ssh -i ~/.ssh/id_{{ site.workshop_host }}_ed25519 yourUsername@{{ site.workshop_host_login }}
+$ ssh -i ~/.ssh/id_ed25519 yourUsername@login7.cosma.dur.ac.uk
 ```
 {: .language-bash}
 
 or
 
 ```
-ssh -i ~/.ssh/id_{{ site.workshop_host }}_rsa yourUsername@{{ site.workshop_host_login }}
+$ ssh -i ~/.ssh/id_rsa yourUsername@login7.cosma.dur.ac.uk
 ```
 {: .language-bash}
 
 or if SSH keys have not been enabled
 
 ```
-ssh yourUsername@{{ site.workshop_host_login }}
+$ ssh yourUsername@login7.cosma.dur.ac.uk
 ```
 {: .language-bash}
 
 
 ```
+$ ssh yourUsername@login7.cosma.dur.ac.uk
 ECDSA key fingerprint is SHA256:JRj286Pkqh6aeO5zx1QUkS8un5fpcapmezusceSGhok.
 ECDSA key fingerprint is MD5:99:59:db:b1:3f:18:d0:2c:49:4e:c2:74:86:ac:f7:c6.
 Are you sure you want to continue connecting (yes/no)?  # type "yes"!
 Warning: Permanently added the ECDSA host key for IP address to the list of known hosts.
-yourUsername@{{ site.workshop_host_login }}'s password:  # no text appears as you enter your password
-Last login: Thu Mar 17 12:59:22 2022 from
-##########################################################################
-## Welcome to     ______                                                ##
-##               /_  __/_  ________________ _                           ##
-##                 / / / / / / ___/ ___/ __ '/                          ##
-##                / / / /_/ / /  (__  ) /_/ /                           ##
-##               /_/  \__,_/_/  /____/\__,_/                            ##
-##########################################################################
+Last login: Wed Jun 15 09:29:21 2022 from globalprotect-nat-extbord.soton.ac.uk
+Welcome to COSMA!
 
-Website: https://dirac.ac.uk/
-Documentation: https://epcced.github.io/dirac-docs/
+You are on a COSMA7 login node.  Please use this responsibly.  Do not start
+any long-running jobs directly (submit to the batch queue instead), and do
+not run processes which hog CPU.
 
-##########################################################################
-[yourUsername@tursa-login1 ~]$
+For more information, please see https://www.dur.ac.uk/cosma
+
+   COSMA TIP:
+The c7jobload (and its 5, 6 and 8 variants) will show information (load,
+memory usage) about currently running jobs.  c7jobload -l JOBID will
+provide this information about a particular job ID.
+
+[yourUsername@login7a [cosma7] ~]$ 
 ```
 {: .output}
 
@@ -317,9 +318,13 @@ This prompt is informative, and lets you grasp certain information at a glance.
 things in depth as we explore the system further.)
 
 ```
-{{ site.workshop_host_prompt }}
+[yourUsername@login7a [cosma7] ~]$ 
 ```
 {: .output}
+
+There are several login nodes associated with the COSMA7 cluster, to which you will be allocated on in a round-robin fashion, so your prompt may your prompt may look slightly different.
+
+In order to exit the shell - and subsequently close the remote connection - you can either type `exit` followed by enter, or press <kbd>Ctrl</kbd> + <kbd>D</kbd>.
 
 ## Telling the Difference between the Local Terminal and the Remote Terminal
 
@@ -336,7 +341,7 @@ convention:
 
 - `[local]$` when the command is to be entered on a terminal connected to your
   local computer
-- `{{ site.workshop_host_prompt }}` when the command is to be entered on a
+- `[yourUsername@login7a [cosma7] ~]$` when the command is to be entered on a
   terminal connected to the remote system
 - `$` when it really doesn't matter which system the terminal is connected to.
 
@@ -355,5 +360,3 @@ convention:
 > you see a change from `[local]$` to `{{ site.workshop_host_prompt }}` and
 > disconnect when you see the reverse.
 {: .callout}
-
-{% include links.md %}

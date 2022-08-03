@@ -48,8 +48,7 @@ universities, labs, or through national networks. These resources usually have
 more central processing units (CPUs), CPUs that operate at higher speeds, more
 memory, more storage, and faster connections with other computer systems. They
 are frequently called "clusters", "supercomputers" or resources for "high
-performance computing" or HPC. In this lesson, we will usually use the
-terminology of HPC and HPC cluster.
+performance computing" or HPC. 
 
 Using a cluster often has the following advantages for researchers:
 
@@ -129,5 +128,3 @@ servers. It's become so essential that Microsoft now [ships it as part of
 Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)! Knowing
 how to use Bash and HPC systems will allow you to operate virtually any modern
 device. With all of this in mind, let's connect to a cluster and get started!
-
-{% include links.md %}
