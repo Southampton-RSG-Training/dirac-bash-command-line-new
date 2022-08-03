@@ -30,5 +30,5 @@ Note that this pattern is quite a common one with the Bash shell: we're running 
 > > 
 > > By using the grep directly in the pipe, we've removed the need for a separate script, simplifying the pipe.
 > >
-> {: .solution}
+>{: .solution}
 {: .challenge}
