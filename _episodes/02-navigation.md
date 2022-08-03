@@ -4,19 +4,19 @@ slug: dirac-bash-command-line-moving-around-looking-things
 teaching: 15 
 exercises: 5
 questions:
-- How do I navigate and look around the system?
+- "How do I navigate and look around the system?"
 objectives:
-- Learn how to navigate around directories and look at their contents
-- Explain the difference between a file and a directory.
-- Translate an absolute path into a relative path and vice versa.
-- Identify the actual command, flags, and filenames in a command-line call.
-- Demonstrate the use of tab completion, and explain its advantages.
+- "Learn how to navigate around directories and look at their contents"
+- "Explain the difference between a file and a directory."
+- "Translate an absolute path into a relative path and vice versa."
+- "Identify the actual command, flags, and filenames in a command-line call."
+- "Demonstrate the use of tab completion, and explain its advantages."
 keypoints:
-- Your current directory is referred to as the working directory.
-- To change directories, use `cd`.
-- To view files, use `ls`.
-- You can view help for a command with `man command` or `command --help`.
-- Hit `tab` to autocomplete whatever you're currently typing.
+- "Your current directory is referred to as the working directory."
+- "To change directories, use `cd`."
+- "To view files, use `ls`."
+- "You can view help for a command with `man command` or `command --help`."
+- "Hit `tab` to autocomplete whatever you're currently typing."
 ---
 
 At this point in the lesson, we've just logged into the system. Nothing has
