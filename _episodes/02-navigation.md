@@ -76,9 +76,10 @@ $ pwd
 
 So, we know where we are. How do we look and see what's in our current 
 directory?
-```
+
+~~~
 $ ls
-```
+~~~
 {: .language-bash}
 
 `ls` prints the names of the files and directories in the current directory in
@@ -117,9 +118,9 @@ current location. Notice that this command required two pieces of input: the
 actual name of the command (`mkdir`) and an argument that specifies the name of
 the directory you wish to create.
 
-```
+~~~
 $ mkdir documents
-```
+~~~
 {: .language-bash}
 
 Let's us `ls` again. What do we see?
@@ -128,14 +129,14 @@ Our folder is there, awesome. What if we wanted to go inside it and do stuff
 there? We will use the `cd` (change directory) command to move around. Let's
 `cd` into our new documents folder.
 
-```
+~~~
 $ cd documents
 $ pwd
-```
+~~~
 {: .language-bash}
-```
+~~~
 /cosma/home/ds007/yourUsername/documents
-```
+~~~
 {: .output}
 
 Now that we know how to use `cd`, we can go anywhere. That's a lot of
@@ -144,11 +145,11 @@ started?
 
 To go back to your home directory, the following three commands will work:
 
-```
+~~~
 $ cd /cosma/home/ds007/yourUserName
 $ cd ~
 $ cd
-```
+~~~
 {: .language-bash}
 
 What is the ~ character? When using the shell, ~ is a shortcut that always represents
@@ -160,17 +161,17 @@ are always prefixed with a `/`. `/` by itself is the "root" or base directory.
 
 Let's go there now, look around, and then return to our home directory.
 
-```
+~~~
 $ cd /
 $ ls
 $ cd ~
-```
+~~~
 {: .language-bash}
-```
+~~~
 bin    dev   initrd  local         mnt  proc     root  scratch  tmp  work
 boot   etc   lib     localscratch  nix  project  run   srv      usr
 cvmfs  home  lib64   media         opt  ram      sbin  sys      var
-```
+~~~
 {: .output}
 
 The "home" directory is the one where we generally want to keep all of our
@@ -219,18 +220,18 @@ There are several other useful shortcuts you should be aware of.
 
 Let's try these out now:
 
-```
+~~~
 $ cd ./documents
 $ pwd
 $ cd ..
 $ pwd
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 /cosma/home/ds007/yourUserName/documents
 /cosma/home/ds007/yourUserName
-```
+~~~
 {: .output}
 
 Many commands also have multiple behaviours that you can invoke with command
@@ -246,25 +247,25 @@ files will not appear otherwise, but that doesn't mean they aren't there!
 config files and other tempfiles that the user doesn't necessarily need to see
 all the time.
 
-```
+~~~
 $ ls -a
-```
+~~~
 {: .language-bash}
-```
+~~~
 .  ..  .bash_logout  .bash_profile  .bashrc  documents  .emacs  .mozilla  .ssh
-```
+~~~
 {: .output}
 
 Notice how both `.` and `..` are visible as hidden files. Show files, their
 size in bytes, date last modified, permissions, and other things with `-l`.
 
-```
+~~~
 $ ls -l
-```
+~~~
 {: .language-bash}
-```
+~~~
 drwxr-xr-x 2 yourUsername ds007 4096 Jan 14 17:31 documents
-```
+~~~
 {: .output}
 
 This is a lot of information to take in at once, but we will explain this
@@ -273,12 +274,12 @@ to know about your files without actually looking at them.
 
 We can also use multiple flags at the same time!
 
-```
+~~~
 $ ls -l -a
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 [yourUsername@login7a [cosma7] ~]$ ls -la
 total 32
 drwxr-x---  7 yourUsername ds007 270 Jun 16 14:02 .
@@ -296,7 +297,7 @@ drwxr-xr-x  4 yourUsername ds007  51 Apr 22  2018 .mozilla
 drwx------  2 yourUsername ds007  33 Jun 13 15:06 .ssh
 drwxr-xr-x  2 yourUsername ds007  29 May  3  2018 .xemacs
 -rw-r--r--  1 yourUsername ds007 658 Jun 13 15:06 .zshrc
-```
+~~~
 {: .output}
 
 Flags generally precede any arguments passed to a UNIX command. `ls` actually
@@ -304,23 +305,23 @@ takes an extra argument that specifies a directory to look into. When you use
 flags and arguments together, the syntax (how it's supposed to be typed)
 generally looks something like this:
 
-```
+~~~
 $ command <flags/options> <arguments>
-```
+~~~
 {: .language-bash}
 
 So using `ls -l -a` on a different directory than the one we're in would look
 something like:
 
-```
+~~~
 $ ls -l -a ~/documents
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 drwxr-xr-x 2 yourUsername ds007  10 Jun 16 14:02 .
 drwxr-x--- 7 yourUsername ds007 270 Jun 16 14:02 ..
-```
+~~~
 {: .output}
 
 ## Where to go for help?
@@ -330,12 +331,12 @@ at for help when we need help? There is a very helpful manual for most UNIX
 commands: `man` (if you've ever heard of a "man page" for something, this is
 what it is).
 
-```
+~~~
 $ man ls
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 LS(1)                          User Commands                          LS(1)
 
 NAME
@@ -349,7 +350,7 @@ DESCRIPTION
      Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
 
      Mandatory arguments to long options are mandatory for short options too.
-```
+~~~
 {: .output}
 
 To navigate through the `man` pages, you may use the up and down arrow keys to
@@ -361,12 +362,12 @@ to use a mouse or laptop trackpad to scroll through the pages. You can quit the
 Alternatively, most commands you run will have a `--help` option that displays
 addition information For instance, with `ls`:
 
-```
+~~~
 $ ls --help
-```
+~~~
 {: .language-bash}
 
-```
+~~~
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
@@ -382,7 +383,7 @@ Mandatory arguments to long options are mandatory for short options too.
   -B, --ignore-backups       do not list implied entries ending with ~
 
 # further output omitted for clarity
-```
+~~~
 {: .output}
 
 > ## Unsupported command-line options
