@@ -23,10 +23,10 @@ Note that this pattern is quite a common one with the Bash shell: we're running 
 > 
 > > ## Solution
 > > 
+> > ~~~ bash
+> > $ ./loop.sh | grep "dmel" | head -n 1
 > > ~~~
-> > $ ./loop.sh &#124; grep "dmel" &#124; head -n 1
-> > ~~~
-> > {: .language-python}
+> > {: .language-bash}
 > > 
 > > By using the grep directly in the pipe, we've removed the need for a separate script, simplifying the pipe.
 > >
