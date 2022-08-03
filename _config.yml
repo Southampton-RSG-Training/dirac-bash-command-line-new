@@ -1,9 +1,10 @@
 #------------------------------------------------------------
 # Values for this lesson.
 #------------------------------------------------------------
-
 # What kind of thing is this ("lesson")? #Don't change
 kind: "lesson"
+# Is this a permanent page 'static' or a taught lesson 'dated'
+delivery: "static"
 
 type: "episode" # The other valid option is "episode_r"
 
@@ -13,7 +14,9 @@ form_title: "Bash+Shell+Using+the+Command+Line" # This is required for the surve
 
 # Email address, no mailto:
 email: "email@dirac.org"
+logo_site: "https://dirac.ac.uk/"
 
+# For static delivery this section can all be ignored ==================================================================
 # Specify the location of the workshop
 venue: "TBC"           # name of location use "online" if online
 address: "TBC"         # address of location or url of platform
@@ -31,6 +34,7 @@ enddate: "TBC"          # e.g. YYYY-MM-DD
 
 # Start time in minutes (0 to be clock-independent, 3:30 pm or 15:30 both okay).
 start-time: 0
+# ======================================================================================================================
 
 ###
 # It is unlikely you need to modify the values below this line. Unless you are developing content.
@@ -61,7 +65,6 @@ lc_site: "https://librarycarpentry.org/"
 swc_github: "https://github.com/swcarpentry"
 swc_pages: "https://swcarpentry.github.io"
 swc_site: "https://software-carpentry.org"
-rsg_site: "https://rsgsoton.net/"
 template_repo: "https://github.com/carpentries/styles"
 training_site: "https://carpentries.github.io/instructor-training"
 workshop_repo: "https://github.com/carpentries/workshop-template"
