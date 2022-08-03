@@ -15,6 +15,11 @@ keypoints:
 
 Note that this pattern is quite a common one with the Bash shell: we're running a program that gives us potentially a lot of output, and we're filtering out in some way just what we're interested in.
 
+~~~
+$ ./loop.sh | grep "dmel" | head -n 1
+~~~
+{: .language-bash}
+
 > ## Simple is Good
 > 
 > Wherever possible, we should always try to simplify the code we write, removing any extraneous use of scripts or code that isn't needed. This enhances readability and makes our code easier to understand.
