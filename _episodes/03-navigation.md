@@ -97,7 +97,7 @@ alphabetical order, arranged neatly into columns.
 > >
 > > You would likely see something more like this:
 > >
-> > ~~~
+> > ~~~ output
 > > Applications Documents    Library      Music        Public
 > > Desktop      Downloads    Movies       Pictures
 > > ~~~
@@ -391,12 +391,12 @@ Mandatory arguments to long options are mandatory for short options too.
 > If you try to use an option that is not supported, `ls` and other programs
 > will print an error message similar to this:
 >
-> ~~~
+> ~~~ bash
 > [yourUsername@login7a [cosma7] ~]$ ls -j
 > ~~~
 > {: .language-bash}
 > 
-> ~~~
+> ~~~ error
 > ls: invalid option -- 'j'
 > Try 'ls --help' for more information.
 > ~~~
@@ -467,7 +467,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > Challenge Questions), if `pwd` displays `/Users/backup`, and `-r` tells `ls`
 > to display things in reverse order, what command will display:
 >
-> ~~~
+> ~~~ output
 > pnas_sub/ pnas_final/ original/
 > ~~~
 > {: .output}
