@@ -96,10 +96,10 @@ alphabetical order, arranged neatly into columns.
 > >
 > > You would likely see something more like this:
 > >
-> > ```
+> > ~~~
 > > Applications Documents    Library      Music        Public
 > > Desktop      Downloads    Movies       Pictures
-> > ```
+> > ~~~
 > > 
 > {: .output}
 > 
