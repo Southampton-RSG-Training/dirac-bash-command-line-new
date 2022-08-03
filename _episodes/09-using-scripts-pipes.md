@@ -19,16 +19,16 @@ Note that this pattern is quite a common one with the Bash shell: we're running 
 > 
 > Wherever possible, we should always try to simplify the code we write, removing any extraneous use of scripts or code that isn't needed. This enhances readability and makes our code easier to understand.
 > 
-> We've written a script that filters out output that ends in `0`. Instead of using `./filter.sh` in our pipe, what could we replace it with that would accomplish the same thing?
+> We've written a script that filters out output that ends in 0. Instead of using ./filter.sh in our pipe, what could we replace it with that would accomplish the same thing?
 > 
 > > ## Solution
 > > 
 > > ~~~
-> > ./loop.sh | grep "dmel" | head -n 1
+> > $ ./loop.sh | grep "dmel" | head -n 1
 > > ~~~
 > > {: .language-bash}
 > > 
-> > By using the `grep` directly in the pipe, we've removed the need for a separate script, simplifying the pipe.
+> > By using the grep directly in the pipe, we've removed the need for a separate script, simplifying the pipe.
 > >
 > 
 {: .solution}
