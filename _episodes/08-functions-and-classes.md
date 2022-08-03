@@ -1,6 +1,6 @@
 ---
 title: "Functions and Classes"
-slug: dirac-software-engineering-classes
+slug: dirac-bash-command-line-classes
 teaching: 15
 exercises: 15
 questions:
