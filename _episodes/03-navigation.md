@@ -107,9 +107,7 @@ alphabetical order, arranged neatly into columns.
 > > In addition, you should also note that the preamble before the prompt (`$`)
 > > is different. This is very important for making sure you know what system
 > > you are issuing commands on when in the shell.
-> 
-{: .solution}
-
+>{: .solution}
 {: .challenge}
 
 If nothing shows up when you run `ls`, it means that nothing's there. Let's
