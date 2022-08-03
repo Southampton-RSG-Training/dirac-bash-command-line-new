@@ -45,6 +45,7 @@ user, i.e., it shows us who the shell thinks we are:
 $ whoami
 ~~~
 {: .language-bash}
+
 ~~~
 yourUsername
 ~~~
@@ -69,6 +70,7 @@ system to system.
 $ pwd
 ~~~
 {: .language-bash}
+
 ~~~
 /cosma/home/ds007/yourUsername
 ~~~
@@ -97,7 +99,7 @@ alphabetical order, arranged neatly into columns.
 > >
 > > You would likely see something more like this:
 > >
-> > ~~~ output
+> > ~~~
 > > Applications Documents    Library      Music        Public
 > > Desktop      Downloads    Movies       Pictures
 > > ~~~
@@ -136,6 +138,7 @@ $ cd documents
 $ pwd
 ~~~
 {: .language-bash}
+
 ~~~
 /cosma/home/ds007/yourUsername/documents
 ~~~
@@ -169,6 +172,7 @@ $ ls
 $ cd ~
 ~~~
 {: .language-bash}
+
 ~~~
 bin    dev   initrd  local         mnt  proc     root  scratch  tmp  work
 boot   etc   lib     localscratch  nix  project  run   srv      usr
@@ -253,6 +257,7 @@ all the time.
 $ ls -a
 ~~~
 {: .language-bash}
+
 ~~~
 .  ..  .bash_logout  .bash_profile  .bashrc  documents  .emacs  .mozilla  .ssh
 ~~~
@@ -265,6 +270,7 @@ size in bytes, date last modified, permissions, and other things with `-l`.
 $ ls -l
 ~~~
 {: .language-bash}
+
 ~~~
 drwxr-xr-x 2 yourUsername ds007 4096 Jan 14 17:31 documents
 ~~~
@@ -398,7 +404,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > ~~~
 > {: .language-bash}
 > 
-> ~~~ error
+> ~~~
 > ls: invalid option -- 'j'
 > Try 'ls --help' for more information.
 > ~~~
