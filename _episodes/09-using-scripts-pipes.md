@@ -24,7 +24,7 @@ Note that this pattern is quite a common one with the Bash shell: we're running 
 > > ## Solution
 > > 
 > > ~~~
-> > $ ./loop.sh | grep "dmel" | head -n 1
+> > $ ./loop.sh grep "dmel" head -n 1
 > > ~~~
 > > {: .language-python}
 > > 
