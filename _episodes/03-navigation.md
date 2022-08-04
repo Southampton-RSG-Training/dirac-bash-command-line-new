@@ -99,7 +99,7 @@ alphabetical order, arranged neatly into columns.
 > >
 > > You would likely see something more like this:
 > >
-> > ~~~ bash
+> > ~~~
 > > Applications Documents    Library      Music        Public
 > > Desktop      Downloads    Movies       Pictures
 > > ~~~
@@ -110,7 +110,6 @@ alphabetical order, arranged neatly into columns.
 > > In addition, you should also note that the preamble before the prompt (`$`)
 > > is different. This is very important for making sure you know what system
 > > you are issuing commands on when in the shell.
-> >
 >{: .solution}
 {: .challenge}
 
@@ -481,7 +480,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > Challenge Questions), if `pwd` displays `/Users/backup`, and `-r` tells `ls`
 > to display things in reverse order, what command will display:
 >
-> ~~~ output
+> ~~~
 > pnas_sub/ pnas_final/ original/
 > ~~~
 > 
@@ -499,9 +498,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > >     in the current directory.
 > >  3. Yes: uses the absolute path explicitly.
 > >  4. Correct: see explanations above.
-> 
-{: .solution}
-
+>{: .solution}
 {: .challenge}
 
 > ## Exploring More `ls` Arguments
