@@ -87,15 +87,6 @@ $ ls
 `ls` prints the names of the files and directories in the current directory in
 alphabetical order, arranged neatly into columns.
 
-> ## Differences between remote and local system
->
-> It's important to be able to distinguish whether you're on your local machine or a remote
-> machine, and if you're connecting from either a Linux or Mac terminal it can be easy to forget!
-> 
-> If you're on either of these machines, open a second terminal window on your local computer
-> and run the `ls` command without logging in remotely. What differences do you see?
-{: .challenge}
-
 If nothing shows up when you run `ls`, it means that nothing's there. Let's
 make a directory for us to play with.
 
@@ -386,7 +377,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > ~~~
 > {: .language-bash}
 > 
-> ~~~ bash
+> ~~~
 > ls: invalid option -- 'j'
 > Try 'ls --help' for more information.
 > ~~~
