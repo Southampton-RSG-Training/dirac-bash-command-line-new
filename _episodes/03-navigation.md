@@ -99,10 +99,10 @@ alphabetical order, arranged neatly into columns.
 > >
 > > You would likely see something more like this:
 > >
-> > ```
+> > ~~~ bash
 > > Applications Documents    Library      Music        Public
 > > Desktop      Downloads    Movies       Pictures
-> > ```
+> > ~~~
 > > {: .output}
 > >
 > > In addition, you should also note that the preamble before the prompt (`$`)
@@ -402,7 +402,7 @@ Mandatory arguments to long options are mandatory for short options too.
 > ~~~
 > {: .language-bash}
 > 
-> ~~~
+> ~~~ bash
 > ls: invalid option -- 'j'
 > Try 'ls --help' for more information.
 > ~~~
