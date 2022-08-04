@@ -37,3 +37,48 @@ $ ./loop.sh | grep "dmel" | head -n 1
 > >
 >{: .solution}
 {: .challenge}
+
+> ## Exploring More `ls` Arguments
+>
+> What does the command `ls` do when used with the `-l` and `-h` arguments?
+>
+> Some of its output is about properties that we do not cover in this lesson
+> (such as file permissions and ownership), but the rest should be useful
+> nevertheless.
+>
+> > ## Solution
+> >
+> > The `-l` arguments makes `ls` use a **l**ong listing format, showing not
+> > only the file/directory names but also additional information such as the
+> > file size and the time of its last modification. The `-h` argument makes
+> > the file size "**h**uman readable", i.e. display something like `5.3K`
+> > instead of `5369`.
+> 
+{: .solution}
+
+{: .challenge}
+
+> ## Differences between remote and local system
+>
+> It's important to be able to distinguish whether you're on your local machine or a remote
+> machine, and if you're connecting from either a Linux or Mac terminal it can be easy to forget!
+> 
+> If you're on either of these machines, open a second terminal window on your local computer
+> and run the `ls` command without logging in remotely. What differences do you see?
+>
+> > ## Solution
+> >
+> > You would likely see something more like this:
+> >
+> > ~~~ python
+> > Applications Documents    Library      Music        Public
+> > Desktop      Downloads    Movies       Pictures
+> > ~~~
+> > {: .language-python}
+> >
+> > In addition, you should also note that the preamble before the prompt (`$`)
+> > is different. This is very important for making sure you know what system
+> > you are issuing commands on when in the shell.
+>{: .solution}
+{: .challenge}
+
